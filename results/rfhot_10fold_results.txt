@@ -1,0 +1,10 @@
+Fold 1 - Accuracy: 0.9403, Precision: 0.9616, Recall: 0.3684, F1: 0.5327, AUROC: 0.8439
+Fold 2 - Accuracy: 0.9404, Precision: 0.9532, Recall: 0.3737, F1: 0.5369, AUROC: 0.8461
+Fold 3 - Accuracy: 0.9403, Precision: 0.9610, Recall: 0.3695, F1: 0.5338, AUROC: 0.8501
+Fold 4 - Accuracy: 0.9392, Precision: 0.9510, Recall: 0.3612, F1: 0.5236, AUROC: 0.8518
+Fold 5 - Accuracy: 0.9389, Precision: 0.9499, Recall: 0.3582, F1: 0.5202, AUROC: 0.8333
+Fold 6 - Accuracy: 0.9404, Precision: 0.9525, Recall: 0.3737, F1: 0.5368, AUROC: 0.8453
+Fold 7 - Accuracy: 0.9387, Precision: 0.9516, Recall: 0.3548, F1: 0.5169, AUROC: 0.8361
+Fold 8 - Accuracy: 0.9396, Precision: 0.9650, Recall: 0.3601, F1: 0.5245, AUROC: 0.8414
+Fold 9 - Accuracy: 0.9406, Precision: 0.9586, Recall: 0.3732, F1: 0.5372, AUROC: 0.8446
+Fold 10 - Accuracy: 0.9401, Precision: 0.9390, Recall: 0.3765, F1: 0.5375, AUROC: 0.8378

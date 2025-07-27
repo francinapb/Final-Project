@@ -1,0 +1,54 @@
+
+
+ READING FASTA FILE: examples/sequences/test.fasta
+
+ SAMPLE: 
+
+{'id': 'NC_000913.2:2541-2581(+)|POSITIVE', 'seq': 'GCCCGTGATGAAGGAAAAGTTTTGCGCTATGTTGGCAATA'}
+
+ # SEQS: 9. SAMPLE: GCCCGTGATGAAGGAAAAGTTTTGCGCTATGTTGGCAATA
+	 TIME ELAPSED FROM START (HOUR:MIN:SEC): 00:00:00
+
+ CONVERTING SEQUENCES TO RF-HOT DATA TYPE
+
+ INPUT SHAPE 9 
+SAMPLE WITH LEN 40: 
+GCCCGTGATGAAGGAAAAGTTTTGCGCTATGTTGGCAATA
+
+ CONVERTING DATA
+
+ HOT ENCODED SEQUENCES GENERATED SUCCESSFULLY.
+
+   A  G  C  T  A  ...  T  A  G  C  T
+0  0  1  0  0  0  ...  1  1  0  0  0
+1  1  0  0  0  1  ...  1  0  0  0  1
+2  1  0  0  0  0  ...  1  1  0  0  0
+3  0  0  1  0  0  ...  0  1  0  0  0
+4  0  1  0  0  1  ...  0  1  0  0  0
+
+[5 rows x 160 columns]
+	 TIME ELAPSED FROM START (HOUR:MIN:SEC): 00:00:00
+
+ LOADING ML MODEL models/RF-HOT.model
+
+ PREDICTING SEQUENCES USING: 
+
+GridSearchCV(cv=10,
+             estimator=RandomForestClassifier(class_weight={0: 0.5512173740112261,
+                                                            1: 5.381156147232458},
+                                              min_samples_leaf=5, verbose=2),
+             iid=False,
+             param_grid={'max_features': ['log2'], 'n_estimators': [2000]},
+             refit='average_precision',
+             scoring=['average_precision', 'precision', 'recall'], verbose=2)
+	 PREDICTIONS GENERATED SUCCESSFULLY. SAMPLE: 
+
+                                     CHROM                                       SEQ      PRED
+0        NC_000913.2:2541-2581(+)|POSITIVE  GCCCGTGATGAAGGAAAAGTTTTGCGCTATGTTGGCAATA  0.832246
+1        NC_000913.2:5107-5147(+)|POSITIVE  AAAAGGAGAAATTCTCAATAAATGCGGTAACTTAGAGATT  0.713419
+2        NC_000913.2:8002-8042(+)|POSITIVE  ACGTTACCAATTGTTTAAGAAGTATATACGCTACGAGGTA  0.642305
+3        NC_000913.2:8052-8092(-)|POSITIVE  CCCGCCATTTTTATACAAAACCTCATGTATGCTACGCAGA  0.735783
+4  NC_000913.2:2315833-2315873(+)|NEGATIVE  GAATACGCACGGTAAACTGGCTGCCCATTCCCGGTTCTGA  0.095024. 
+
+SAVED AT results/sequences_predictions.csv
+	 TIME ELAPSED FROM START (HOUR:MIN:SEC): 00:00:02
