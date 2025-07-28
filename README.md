@@ -1,30 +1,112 @@
 # Promoter Prediction in *Pseudomonas putida* using Retrained RF-HOT Model
 
-This repository contains all scripts, data references, and instructions required to retrain and evaluate the **RF-HOT** model from the [Promotech framework](https://github.com/Gabaldonlab/promotech) for promoter prediction in *Pseudomonas putida* KT2440.
-
-## Overview
-
-The objective of this project is to refine promoter prediction by integrating validated transcription start sites (TSS) from *P. putida* into an existing multi-species training set. The model is retrained using one-hot encoded sequences and evaluated on an external validation set to assess performance.
+This repository extends the Promotech framework to retrain the RF-HOT model for improved promoter prediction in *Pseudomonas putida* KT2440. It integrates curated multi-species datasets, one-hot encoded training and test sequences, and evaluation scripts to produce a more accurate and interpretable model for synthetic biology and regulatory genomics applications.
 
 ---
 
 ## Repository Structure
 
 ```bash
-├── data/
-│   ├── positive/                # FASTA files of known promoters (40 bp upstream of TSS)
-│   ├── negative/                # FASTA files of negative samples (from CDS regions)
-│   ├── test_set/                # One-hot encoded test data (test_X.npy, test_y.npy)
-├── scripts/
-│   ├── one_hot_encoding.py      # Script to convert sequences into one-hot encoded NumPy arrays
-│   ├── create_test_set.py       # Script to generate and encode the independent test set
-│   ├── compare_models.py        # Script to evaluate and compare original and retrained models
-│   └── rfhot_train.py           # (Optional) Standalone training script for RF-HOT retraining
-├── models/
-│   ├── RF-HOT.model             # Original Promotech model
-│   ├── RF-HOT-CUSTOM.model      # Retrained model including *P. putida*
-├── results/
-│   ├── rfhot_10fold_results.txt # Cross-validation metrics for retrained model
-│   ├── evaluation_metrics.csv   # Final test set performance metrics
-│   ├── plots/                   # ROC, PR curves, and confusion matrices
-└── README.md
+├── benchmark/                        # Scripts from original Promotech to benchmark performance
+│   ├── __pycache__/
+│   │   ├── ipromoter2l.cpython-36.pyc
+│   │   ├── ipromoter2ldatabase.cpython-36.pyc
+│   │   └── process_benchmark.cpython-36.pyc
+│   ├── ipromoter2l.py
+│   ├── ipromoter2ldatabase.py
+│   └── process_benchmark.py
+
+├── combined_data/                   # Encoded training and test arrays
+│   ├── combined_X.npy
+│   ├── combined_y.npy
+│   ├── test_X.npy
+│   └── test_y.npy
+
+├── core/                            # Core Promotech framework scripts
+│   ├── __pycache__/
+│   │   ├── database.cpython-36.pyc
+│   │   └── utils.cpython-36.pyc
+│   ├── base.py
+│   ├── data.py
+│   ├── database.py
+│   ├── main.py
+│   ├── models.py
+│   ├── nextflow
+│   ├── nextflow.config
+│   ├── pipeline.nf
+│   ├── pipeline_unbalanced.nf
+│   └── utils.py
+
+├── dataset/                         # Training and validation datasets
+│   ├── training/
+│   │   ├── CPNEUMONIAE/
+│   │   ├── ECOLI/
+│   │   ├── ECOLI_2/
+│   │   ├── HPYLORI/
+│   │   ├── HPYLORI_2/
+│   │   ├── LINTERROGANS/
+│   │   ├── PPUTIDA/
+│   │   ├── SCOELICOLOR/
+│   │   ├── SONEIDENSIS/
+│   │   ├── SPYOGENE/
+│   │   └── STYPHIRMURIUM/
+│   │       # Each contains negative.fasta and positive.fasta
+│   └── validation/
+│       ├── BACILLUS/
+│       ├── CLOSTRIDIUM/
+│       ├── MYCOBACTER/
+│       ├── RHODOBACTER_1/
+│       └── RHODOBACTER_2/
+│           # Each contains negative.fasta and positive.fasta
+
+├── examples/                        # Sample sequences and logs from Promotech
+│   └── sequences/
+│       ├── example.log.txt
+│       └── test.fasta
+
+├── genome/                          # Genome processing script
+│   ├── __pycache__/
+│   │   └── process_genome.cpython-36.pyc
+│   └── process_genome.py
+
+├── models/                          # Original and retrained models
+│   ├── GRU-0.h5
+│   ├── GRU-1.h5
+│   ├── LSTM-3.h5
+│   ├── LSTM-4.h5
+│   ├── RF-HOT.model                # Original Promotech RF-HOT model
+│   ├── RF-TETRA.model
+│   ├── tokenizer.data
+│   └── RF-HOT-CUSTOM.model         # Retrained model with P. putida
+
+├── promotech_env.yml               # Conda environment files
+├── promotech_mac_env.yml
+├── promotech.py
+
+├── results/                        # Output plots and tables
+│   ├── ROC and PR curves
+│   ├── confusion matrix plots
+│   └── evaluation_metrics.csv
+
+├── scripts/                        # Custom scripts for encoding, training, and evaluation
+│   ├── compare_models.py
+│   ├── create_test_set.py
+│   ├── one_hot_encoding.py
+│   └── train_rfhot.py
+
+├── sequences/                      # Sequence preprocessing
+│   ├── __pycache__/
+│   │   └── process_sequences.cpython-36.pyc
+│   └── process_sequences.py
+
+├── ui/                             # Promotech GUI resources
+│   ├── __pycache__/
+│   │   └── GUI.cpython-36.pyc
+│   ├── form.ui
+│   ├── GUI.py
+│   ├── main.pyproject
+│   ├── main.pyproject.user
+│   ├── main.qml
+│   └── ui_form-h
+
+---
