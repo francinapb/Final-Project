@@ -6,20 +6,26 @@ This repository extends the Promotech framework to retrain the RF-HOT model for 
 1. Set up and activation environment as in the original Promotech repository: https://github.com/BioinformaticsLabAtMUN/Promotech
 
     conda env create -f promotech_env.yml for Ubuntu 20.04
+   
     conda env create -f promotech_mac_env.yml for Mac OS Big Sur V11.3
+   
     conda activate promotech_env
 
 ## Commands
 1. One-hot encode sequences
+   
     python scripts/one_hot_encoding.py
 
-2. Retrained model
+3. Retrained model
+   
     python scripts/train_rfhot.py
 
-3. Create test set
+5. Create test set
+   
     python scripts/create_test_set.py
 
-4. Compare models
+7. Compare models
+   
     python scripts/compare_models.py
 
 Results saved in the results/ folder
