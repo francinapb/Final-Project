@@ -2,6 +2,38 @@
 
 This repository extends the Promotech framework to retrain the RF-HOT model for improved promoter prediction in *Pseudomonas putida* KT2440. It integrates curated multi-species datasets, one-hot encoded training and test sequences, and evaluation scripts to produce a more accurate and interpretable model for synthetic biology and regulatory genomics applications.
 
+# Requirements
+1. Set up and activation environment as in the original Promotech repository: https://github.com/BioinformaticsLabAtMUN/Promotech
+
+    conda env create -f promotech_env.yml for Ubuntu 20.04
+    conda env create -f promotech_mac_env.yml for Mac OS Big Sur V11.3
+    conda activate promotech_env
+
+# Commands
+1. One-hot encode sequences
+    python scripts/one_hot_encoding.py
+
+2. Retrained model
+    python scripts/train_rfhot.py
+
+3. Create test set
+    python scripts/create_test_set.py
+
+4. Compare models
+    python scripts/compare_models.py
+
+Results saved in the results/ folder
+
+
+# References
+
+Promotech original repository: https://github.com/BioinformaticsLabAtMUN/Promotech
+Biopython: https://biopython.org/
+Scikit-learn: https://scikit-learn.org/stable/
+BEDTools, VSEARCH, BLASTn: used in the data generation for *Pseudomonas putida*
+
+# Citation
+Francina Parera-Bordoy. Optimising promoter finding software for se in pathogenic bacteria. University of Galway, 2025
 ---
 
 ## Repository Structure
