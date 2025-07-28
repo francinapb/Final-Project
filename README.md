@@ -14,19 +14,19 @@ This repository extends the Promotech framework to retrain the RF-HOT model for 
 ## Commands
 1. One-hot encode sequences
    
-    python scripts/one_hot_encoding.py
+    <pre> ``` python scripts/one_hot_encoding.py ``` </pre>
 
 3. Retrained model
    
-    python scripts/train_rfhot.py
+    <pre> ``` python scripts/train_rfhot.py ``` </pre>
 
 5. Create test set
    
-    python scripts/create_test_set.py
+    <pre> ``` python scripts/create_test_set.py ``` </pre>
 
 7. Compare models
    
-    python scripts/compare_models.py
+    <pre> ``` python scripts/compare_models.py ``` </pre>
 
 Results saved in the results/ folder
 
