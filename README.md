@@ -125,7 +125,7 @@ Francina Parera-Bordoy. _Optimising promoter finding software for use in pathoge
 ├── promotech_mac_env.yml
 ├── promotech.py
 
-├── results/                        # Output plots and tables
+├── results_pyfiles/                        # Output plots and tables
 │   ├── ROC and PR curves
 │   ├── confusion matrix plots
 │   └── evaluation_metrics.csv
