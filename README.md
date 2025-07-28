@@ -30,22 +30,6 @@ This repository extends the Promotech framework to retrain the RF-HOT model for 
 
 Results saved in the results/ folder
 
-
-## References
-
-Promotech original repository: https://github.com/BioinformaticsLabAtMUN/Promotech
-
-Promotech: A general tool for bacterial promoter recognition. Ruben Chevez-Guardado and Lourdes Peña-Castillo. Genome Biol 22(1):318 (2021). PMID: 34789306. [DOI: 10.1186/s13059-021-02514-9 ] (https://doi.org/10.1186/s13059-021-02514-9)
-
-Biopython: https://biopython.org/
-
-Scikit-learn: https://scikit-learn.org/stable/
-
-BEDTools, VSEARCH, BLASTn: used in the data generation for *Pseudomonas putida*
-
-## Citation
-Francina Parera-Bordoy. _Optimising promoter finding software for use in pathogenic bacteria_. University of Galway, 2025.
-
 ---
 
 ## Repository Structure
@@ -154,3 +138,20 @@ Francina Parera-Bordoy. _Optimising promoter finding software for use in pathoge
 │   └── ui_form-h
 
 ---
+
+## References
+
+Promotech original repository: https://github.com/BioinformaticsLabAtMUN/Promotech
+
+Promotech: A general tool for bacterial promoter recognition. Ruben Chevez-Guardado and Lourdes Peña-Castillo. Genome Biol 22(1):318 (2021). PMID: 34789306. [DOI: 10.1186/s13059-021-02514-9 ] (https://doi.org/10.1186/s13059-021-02514-9)
+
+Biopython: https://biopython.org/
+
+Scikit-learn: https://scikit-learn.org/stable/
+
+BEDTools, VSEARCH, BLASTn: used in the data generation for *Pseudomonas putida*
+
+## Citation
+Francina Parera-Bordoy. _Optimising promoter finding software for use in pathogenic bacteria_. University of Galway, 2025.
+
+
