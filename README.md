@@ -33,7 +33,8 @@ Scikit-learn: https://scikit-learn.org/stable/
 BEDTools, VSEARCH, BLASTn: used in the data generation for *Pseudomonas putida*
 
 ## Citation
-Francina Parera-Bordoy. Optimising promoter finding software for se in pathogenic bacteria. University of Galway, 2025
+Francina Parera-Bordoy. Optimising promoter finding software for use in pathogenic bacteria. University of Galway, 2025.
+
 ---
 
 ## Repository Structure
