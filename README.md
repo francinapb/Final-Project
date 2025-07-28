@@ -28,8 +28,11 @@ Results saved in the results/ folder
 ## References
 
 Promotech original repository: https://github.com/BioinformaticsLabAtMUN/Promotech
+
 Biopython: https://biopython.org/
+
 Scikit-learn: https://scikit-learn.org/stable/
+
 BEDTools, VSEARCH, BLASTn: used in the data generation for *Pseudomonas putida*
 
 ## Citation
