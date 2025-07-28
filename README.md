@@ -33,14 +33,15 @@ Results saved in the results/ folder
 5. Sequences prediction with the new model
 
     <pre>  python promotech.py -s -m RF-HOT-CUSTOM -f examples/sequences/test.fasta -o results  <pre>
+        
 
 ## References
 
 Promotech original repository: https://github.com/BioinformaticsLabAtMUN/Promotech
 
-Chevez-Guardado, R., & Peña-Castillo, L. (2021). Promotech: a general tool for bacterial promoter recognition. Genome Biology, 22(1), 1–16. https://doi.org/10.1186/S13059-021-02514-9/TABLES/10
-
-Su, W., Liu, M. L., Yang, Y. H., Wang, J. S., Li, S. H., Lv, H., Dao, F. Y., Yang, H., & Lin, H. (2021). PPD: A Manually Curated Database for Experimentally Verified Prokaryotic Promoters. Journal of Molecular Biology, 433(11), 166860. https://doi.org/10.1016/J.JMB.2021.166860
+R. Chevez-Guardado and L. Peña-Castillo, “Promotech: a general tool for bacterial promoter recognition,” Genome Biology, vol. 22, no. 1, pp. 1–16, Dec. 2021, doi: 10.1186/S13059-021-02514-9/TABLES/10.
+  
+W. Su et al., “PPD: A Manually Curated Database for Experimentally Verified Prokaryotic Promoters,” Journal of Molecular Biology, vol. 433, no. 11, p. 166860, May 2021, doi: 10.1016/J.JMB.2021.166860.  
 
 Biopython: https://biopython.org/
 
